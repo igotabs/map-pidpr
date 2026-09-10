@@ -6,27 +6,21 @@
   <title>Географічна карта</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; width: 100%; overflow: hidden; }
 
-    body, html { height: 100%; width: 100%; overflow: hidden; }
+    #map { position: fixed; inset: 0; background: #e5e3df; }
 
-    /* ── Full-screen map ── */
-    #map { position: fixed; inset: 0; }
-
-    /* ── Top overlay bar ── */
+    /* Search bar */
     #top-bar {
       position: fixed;
       top: 12px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 100;
-      display: flex;
-      align-items: center;
-      gap: 8px;
       width: min(460px, calc(100vw - 24px));
     }
-
     #search-input {
-      flex: 1;
+      width: 100%;
       padding: 9px 14px;
       border: none;
       border-radius: 24px;
@@ -38,10 +32,30 @@
     }
     #search-input::placeholder { color: #999; }
 
-    /* ── Status chip ── */
+    #search-results {
+      position: fixed;
+      top: 54px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(460px, calc(100vw - 24px));
+      z-index: 100;
+      background: rgba(255,255,255,0.98);
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.2);
+      max-height: 260px;
+      overflow-y: auto;
+      display: none;
+    }
+    .result-item { padding: 10px 14px; cursor: pointer; border-bottom: 1px solid #f0f0f0; }
+    .result-item:last-child { border-bottom: none; }
+    .result-item:hover { background: #fff0f0; }
+    .result-name { font-size: 13px; font-weight: 600; color: #1a1a2e; }
+    .result-addr { font-size: 11px; color: #888; margin-top: 2px; }
+
+    /* Status chip */
     #status-chip {
       position: fixed;
-      bottom: 28px;
+      bottom: 24px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 100;
@@ -57,34 +71,14 @@
     }
     #status-chip.hidden { opacity: 0; pointer-events: none; }
 
-    /* ── Search results dropdown ── */
-    #search-results {
-      position: fixed;
-      top: 54px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: min(460px, calc(100vw - 24px));
-      z-index: 100;
-      background: rgba(255,255,255,0.97);
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,.2);
-      max-height: 260px;
-      overflow-y: auto;
-      display: none;
+    /* Error banner */
+    #err {
+      position: fixed; inset: 0; z-index: 200;
+      display: none; align-items: center; justify-content: center;
+      background: #1a1a2e; color: #ff8080; font-family: Arial, sans-serif;
+      font-size: 15px; text-align: center; padding: 24px;
     }
 
-    .result-item {
-      padding: 10px 14px;
-      cursor: pointer;
-      border-bottom: 1px solid #f0f0f0;
-      transition: background .1s;
-    }
-    .result-item:last-child { border-bottom: none; }
-    .result-item:hover { background: #fff0f0; }
-    .result-name  { font-size: 13px; font-weight: 600; color: #1a1a2e; }
-    .result-addr  { font-size: 11px; color: #888; margin-top: 2px; }
-
-    /* ── InfoWindow override ── */
     .iw-body { font-family: 'Segoe UI', Arial, sans-serif; min-width: 200px; }
     .iw-name { font-size: 14px; font-weight: 700; color: #0d1117; margin-bottom: 4px; }
     .iw-addr { font-size: 12px; color: #555; }
@@ -94,37 +88,32 @@
 
 <div id="map"></div>
 
-<!-- Search bar -->
 <div id="top-bar">
   <input id="search-input" type="text" placeholder="🔍 Пошук за прізвищем…" autocomplete="off" />
 </div>
-
-<!-- Search results dropdown -->
 <div id="search-results"></div>
-
-<!-- Status chip -->
 <div id="status-chip">Завантаження…</div>
+<div id="err"></div>
 
 <script>
   'use strict';
 
-  const GEOCODE_DELAY_MS = 200;
-
-  let map, geocoder, infoWindow;
+  let map, infoWindow;
   let peopleData = [];
   const markers  = {};
 
-  function makeIcon() {
+  function redIcon() {
     return {
-      path:         google.maps.SymbolPath.CIRCLE,
-      scale:        9,
-      fillColor:    '#e53935',
-      fillOpacity:  0.95,
-      strokeColor:  '#7f0000',
+      path: google.maps.SymbolPath.CIRCLE,
+      scale: 9,
+      fillColor: '#e53935',
+      fillOpacity: 0.95,
+      strokeColor: '#7f0000',
       strokeWeight: 1.5
     };
   }
 
+  /* Called by Google Maps API */
   async function initApp() {
     map = new google.maps.Map(document.getElementById('map'), {
       center: { lat: 49.422, lng: 26.987 },
@@ -136,105 +125,85 @@
       mapTypeControlOptions: { position: google.maps.ControlPosition.TOP_RIGHT }
     });
 
-    geocoder   = new google.maps.Geocoder();
     infoWindow = new google.maps.InfoWindow();
-    map.addListener('click', () => {
-      infoWindow.close();
-      hideResults();
-    });
+    map.addListener('click', () => { infoWindow.close(); hideResults(); });
 
-    setStatus('Завантаження даних…');
-
-    const res  = await fetch('/data.json');
-    peopleData = await res.json();
-
-    setStatus(`Геокодування 0 / ${peopleData.length}…`);
-    setupSearch();
-    await geocodeAll();
-  }
-
-  /* ── Geocode all ── */
-  async function geocodeAll() {
-    let placed = 0, failed = 0;
-
-    for (let i = 0; i < peopleData.length; i++) {
-      await new Promise(resolve => {
-        geocoder.geocode(
-          { address: peopleData[i].address + ', Україна', region: 'UA' },
-          (results, status) => {
-            if (status === 'OK' && results.length > 0) {
-              addMarker(i, results[0].geometry.location);
-              placed++;
-            } else {
-              console.warn(`[FAIL] ${peopleData[i].name} | ${peopleData[i].address} | ${status}`);
-              failed++;
-            }
-            const done = placed + failed;
-            const pct  = Math.round((done / peopleData.length) * 100);
-
-            if (done < peopleData.length) {
-              setStatus(`Геокодування ${done} / ${peopleData.length}… (${pct}%)`);
-            } else {
-              const msg = `✅ ${placed} позначок${failed ? `  ❌ ${failed} не знайдено` : ''}`;
-              setStatus(msg);
-              // fade out after 4 s
-              setTimeout(() => {
-                document.getElementById('status-chip').classList.add('hidden');
-              }, 4000);
-            }
-            resolve();
-          }
-        );
-      });
-      await sleep(GEOCODE_DELAY_MS);
+    try {
+      const res  = await fetch('/data.json');
+      peopleData = await res.json();
+    } catch (e) {
+      return setStatus('❌ Не вдалося завантажити data.json');
     }
+
+    placeMarkers();   // instant – coords are pre-baked
+    setupSearch();
   }
 
-  /* ── Add red marker ── */
-  function addMarker(i, position) {
+  /* Place all markers immediately from cached lat/lng */
+  function placeMarkers() {
+    const bounds = new google.maps.LatLngBounds();
+    let count = 0;
+
+    peopleData.forEach((p, i) => {
+      if (p.lat == null || p.lng == null) return;
+      const position = { lat: p.lat, lng: p.lng };
+
+      const marker = new google.maps.Marker({
+        map,
+        position,
+        title: p.name,
+        label: { text: p.surname, fontSize: '11px', fontWeight: 'bold', color: '#ffffff' },
+        icon: redIcon()
+      });
+      marker.addListener('click', () => openInfo(i));
+      markers[i] = marker;
+      bounds.extend(position);
+      count++;
+    });
+
+    if (count > 0) {
+      map.fitBounds(bounds);
+      if (count === 1) map.setZoom(14);
+    }
+
+    setStatus(`✅ ${count} позначок`);
+    setTimeout(() => document.getElementById('status-chip').classList.add('hidden'), 3500);
+  }
+
+  function openInfo(i) {
     const p = peopleData[i];
-    const marker = new google.maps.Marker({
-      map,
-      position,
-      title: p.name,
-      label: {
-        text:       p.surname,
-        fontSize:   '11px',
-        fontWeight: 'bold',
-        color:      '#ffffff'
-      },
-      icon: makeIcon()
-    });
-    marker.addListener('click', () => {
-      infoWindow.setContent(
-        `<div class="iw-body">` +
-          `<div class="iw-name">${esc(p.name)}</div>` +
-          `<div class="iw-addr">${esc(p.address)}</div>` +
-        `</div>`
-      );
-      infoWindow.open(map, marker);
-      hideResults();
-    });
-    markers[i] = marker;
+    infoWindow.setContent(
+      `<div class="iw-body">` +
+        `<div class="iw-name">${esc(p.name)}</div>` +
+        `<div class="iw-addr">${esc(p.address)}</div>` +
+      `</div>`
+    );
+    infoWindow.open(map, markers[i]);
   }
 
-  /* ── Search ── */
+  function focusPerson(i) {
+    const m = markers[i];
+    if (!m) return;
+    map.panTo(m.getPosition());
+    map.setZoom(15);
+    openInfo(i);
+  }
+
+  /* Search */
   function setupSearch() {
     const input   = document.getElementById('search-input');
     const results = document.getElementById('search-results');
 
     input.addEventListener('input', function () {
       const q = this.value.trim().toLowerCase();
-      if (!q) { hideResults(); return; }
+      if (!q) return hideResults();
 
       const hits = peopleData
         .map((p, i) => ({ p, i }))
-        .filter(({ p }) =>
-          p.name.toLowerCase().includes(q) || p.address.toLowerCase().includes(q)
-        )
+        .filter(({ p }) => p.name.toLowerCase().includes(q) || p.address.toLowerCase().includes(q))
         .slice(0, 10);
 
-      if (!hits.length) { hideResults(); return; }
+      if (!hits.length) return hideResults();
 
       results.innerHTML = hits.map(({ p, i }) =>
         `<div class="result-item" data-idx="${i}">` +
@@ -242,7 +211,6 @@
           `<div class="result-addr">${esc(p.address)}</div>` +
         `</div>`
       ).join('');
-
       results.style.display = 'block';
 
       results.querySelectorAll('.result-item').forEach(el => {
@@ -257,43 +225,30 @@
     input.addEventListener('blur', () => setTimeout(hideResults, 150));
   }
 
-  function focusPerson(i) {
-    const marker = markers[i];
-    if (!marker) return;
-    map.panTo(marker.getPosition());
-    map.setZoom(15);
-    const p = peopleData[i];
-    infoWindow.setContent(
-      `<div class="iw-body">` +
-        `<div class="iw-name">${esc(p.name)}</div>` +
-        `<div class="iw-addr">${esc(p.address)}</div>` +
-      `</div>`
-    );
-    infoWindow.open(map, marker);
-  }
+  function hideResults() { document.getElementById('search-results').style.display = 'none'; }
 
-  function hideResults() {
-    document.getElementById('search-results').style.display = 'none';
-  }
-
-  /* ── Helpers ── */
   function setStatus(text) {
     const chip = document.getElementById('status-chip');
     chip.textContent = text;
     chip.classList.remove('hidden');
   }
   function esc(s) {
-    return String(s)
-      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
-      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
-  function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+  /* Surface Google Maps auth failures instead of a blank page */
+  window.gm_authFailure = function () {
+    const el = document.getElementById('err');
+    el.style.display = 'flex';
+    el.innerHTML = '⚠ Помилка Google Maps: ключ API відхилено ' +
+                   '(перевірте обмеження ключа / білінг / дозволені домени).';
+  };
 </script>
 
-<!-- Google Maps API -->
 <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaIydo87nxHMB6SuC_XlxvrM6Bwk_Cwhs&callback=initApp&language=uk&region=UA"
-  async defer>
+  async defer
+  onerror="document.getElementById('err').style.display='flex';document.getElementById('err').textContent='⚠ Не вдалося завантажити Google Maps API (мережа/ключ).';">
 </script>
 
 </body>
