@@ -2,7 +2,6 @@
   "name": "map-pidpr",
   "version": "1.0.0",
   "description": "Географічна карта підприємців",
-  "main": "server.js",
   "scripts": {
     "build": "node build.js",
     "start": "node server.js",

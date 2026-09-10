@@ -1,5 +1,10 @@
 {
   "version": 2,
-  "buildCommand": "node build.js",
-  "outputDirectory": "public"
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "public" }
+    }
+  ]
 }
