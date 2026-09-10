@@ -69,14 +69,22 @@ console.log(`✅  Parsed ${people.length} records from input.xml`);
 const server = http.createServer((req, res) => {
   const reqPath = req.url.split('?')[0];
 
-  if (reqPath === '/data') {
-    res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
-    res.end(JSON.stringify(people));
+  // Serve data.json
+  if (reqPath === '/data.json') {
+    const dataPath = path.join(__dirname, 'public', 'data.json');
+    fs.readFile(dataPath, (err, data) => {
+      if (err) {
+        res.writeHead(404); res.end('data.json not found – run: node build.js');
+        return;
+      }
+      res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(data);
+    });
     return;
   }
 
-  // Serve index.html for everything else
-  fs.readFile(path.join(__dirname, 'index.html'), (err, data) => {
+  // Serve public/index.html for everything else
+  fs.readFile(path.join(__dirname, 'public', 'index.html'), (err, data) => {
     if (err) {
       res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
       res.end('Помилка читання index.html: ' + err.message);
