@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "rewrites": [
-    { "source": "/data", "destination": "/api/data" }
-  ]
+  "buildCommand": "node build.js",
+  "outputDirectory": "public"
 }
