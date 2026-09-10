@@ -1,0 +1,825 @@
+﻿<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40"
+ xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>oleg</Author>
+  <LastAuthor>adm_first adm_last</LastAuthor>
+  <Created>2026-09-10T19:48:35Z</Created>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>11865</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss"/>
+   <Interior/>
+   <NumberFormat ss:Format="###\ ###\ ###"/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Arial" x:CharSet="204" x:Family="Swiss" ss:Bold="1"/>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+   <NumberFormat ss:Format="###\ ###\ ###"/>
+  </Style>
+  <Style ss:ID="s63">
+   <NumberFormat ss:Format="dd/mm/yyyy;@"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="row">
+  <Table ss:ExpandedColumnCount="16" ss:ExpandedRowCount="42" x:FullColumns="1"
+   x:FullRows="1">
+   <Column ss:AutoFitWidth="0" ss:Width="241.5"/>
+   <Row ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Повне ім'я</Data></Cell>
+    <Cell><Data ss:Type="String">Дата народження</Data></Cell>
+    <Cell><Data ss:Type="String">Телефон</Data></Cell>
+    <Cell><Data ss:Type="String">РНОКПП</Data></Cell>
+    <Cell><Data ss:Type="String">Порушник ВО</Data></Cell>
+    <Cell><Data ss:Type="String">ОВУ</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека</Data></Cell>
+    <Cell><Data ss:Type="String">Підкартотека</Data></Cell>
+    <Cell><Data ss:Type="String">Вид обліку</Data></Cell>
+    <Cell><Data ss:Type="String">Резервіст</Data></Cell>
+    <Cell><Data ss:Type="String">Група</Data></Cell>
+    <Cell><Data ss:Type="String">ВОС</Data></Cell>
+    <Cell><Data ss:Type="String">Звання</Data></Cell>
+    <Cell><Data ss:Type="String">Придатність</Data></Cell>
+    <Cell><Data ss:Type="String">Дата протоколу ВЛК</Data></Cell>
+    <Cell><Data ss:Type="String">Місце проживання</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">БОРІСОВ СЕРГІЙ Олександрович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">27.10.1992</Data></Cell>
+    <Cell><Data ss:Type="String">380735877503</Data></Cell>
+    <Cell><Data ss:Type="String">3390313276</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Хмельницький, Паркова, б. 19, кв. 2  Хмельницька область, м Хмельницький, вул. Паркова, б. 19, кв. 2  ХМЕЛЬНИЦЬКА, ХМЕЛЬНИЦЬКИЙ, ВУЛ.ПАРКОВА, б. 19, кв. 2</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ВАКАЛЬЧУК ЯРОСЛАВ ВОЛОДИМИРОВИЧ</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">11.03.1998</Data></Cell>
+    <Cell><Data ss:Type="String">380935173590</Data></Cell>
+    <Cell><Data ss:Type="String">3586412857</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">4 відділ Хмельницького РТЦК та СП (Красилів)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Кульчинки, Польова, б. 2  Хмельницька область, с Кульчинки, Польова, б. 2  Хмельницька область, м. Красилів, вул. Польова, б. 2, кв. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Ватажук Юрій Павлович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">04.08.1992</Data></Cell>
+    <Cell><Data ss:Type="String">0961042672</Data></Cell>
+    <Cell><Data ss:Type="String">3381917019</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">4 відділ Хмельницького РТЦК та СП (Красилів)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний до служби у в/ч забезпечення, ТЦК та СП, ВВНЗ, НЦ, закладах (установах), медпідрозділах, підрозділах логістики, зв’язку, ОЗ, охорони</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">15.01.2025</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Кульчинки, Польова, б. 8  Хмельницька область, с Кульчинки, Польова, б. 8, кв. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ВЕНГРОВ ВІТАЛІЙ Борисович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">11.08.1975</Data></Cell>
+    <Cell><Data ss:Type="String">380676002519</Data></Cell>
+    <Cell><Data ss:Type="String">2761620215</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Олешин, Молодіжна, б. 4  Хмельницька область, с Олешин, Молодіжна, б. 4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ГАВРИЛЮК Святослав Іванович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">03.08.1981</Data></Cell>
+    <Cell><Data ss:Type="String">380985572847</Data></Cell>
+    <Cell><Data ss:Type="String">2980013535</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Кам&amp;#39;янець-Подільський районний територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Воронківці, Незалежності, б. 60, кв.   Хмельницька обл., м.Хмельницький (Хмельницький р-н), вул.Свободи, б. 22, кв. 42</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Гандзюк Денис Ігорович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">12.06.1997</Data></Cell>
+    <Cell><Data ss:Type="String">380931237572</Data></Cell>
+    <Cell><Data ss:Type="String">3559207398</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">1 відділ Шепетівського РТЦК та СП (Славута)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Львівська область, м Львів, Лукаша, б. 1  Львівська, Львів, Лукаша, б. 1, кв. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Гвоздецький Василь Володимирович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">29.09.1991</Data></Cell>
+    <Cell><Data ss:Type="String">380671030242</Data></Cell>
+    <Cell><Data ss:Type="String">3350904054</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">9 відділ Хмельницького РТЦК та СП (Віньківці)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">12.01.2026</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Хмельницький, Максима Залізняка, б. 1В, кв. кв. 4  ХМЕЛЬНИЦЬКА, ХМЕЛЬНИЦЬКИЙ, ВУЛ.ЗАЛІЗНЯКА МАКСИМА, б. 1В, кв. 4</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Герасименюк Олексій Володимирович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">19.03.1999</Data></Cell>
+    <Cell><Data ss:Type="String">380979688531</Data></Cell>
+    <Cell><Data ss:Type="String">3623708999</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Стріхівці, Героя Сугерова, б. 44, кв.   Хмельницька область, м Хмельницький, вул. Зарічанська, б. 10/4, кв. 502  Хмельницька, Хмельницький, Зарічанська, б. 10/4, кв. 502</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ДУБОВИЦЬКИЙ ДМИТРО Єдуардович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">09.04.1982</Data></Cell>
+    <Cell><Data ss:Type="String">380638883000</Data></Cell>
+    <Cell><Data ss:Type="String">3004924637</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Хмельницький, Повстанська, б. 38, кв. 38  Хмельницька область, м Хмельницький, Повстанська, б. 38, кв. 38</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Думарецький Олександр Васильович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">13.06.1983</Data></Cell>
+    <Cell><Data ss:Type="String">380979519162</Data></Cell>
+    <Cell><Data ss:Type="String">3047922674</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Офіцерський склад</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">[021000] Бойове застосування механізованих з&amp;#39;єднань, військових частин і підрозділів</Data></Cell>
+    <Cell><Data ss:Type="String">Молодший лейтенант</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">05.05.2026</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Хмельницький, Січових стрільців, б. 4, кв. 14  Хмельницька область, м Хмельницький, вул. Січових стрільців, б. 4, кв. 14  Хмельницька область, м Хмельницький, Січових стрільців, б. 4, кв. 14</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ЖЕРДЕЦЬКИЙ РОСТИСЛАВ Анатолійович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">17.04.1998</Data></Cell>
+    <Cell><Data ss:Type="String">380961885167</Data></Cell>
+    <Cell><Data ss:Type="String">3590103553</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Хмельницький, Інститутська, б. 7  Хмельницька область, с Пирогівка, вул. Канарчика, б. 9  Хмельницька, с.Пирогівка, вул.Канарчика, б. 9</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ЗАБОЛОТНИЙ ВОЛОДИМИР Сергійович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">13.10.1998</Data></Cell>
+    <Cell><Data ss:Type="String">380672877473</Data></Cell>
+    <Cell><Data ss:Type="String">3608010152</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Хмельницький, Зарічанська, б. 6/4, кв. 62  Хмельницька область, м Хмельницький, вул. Зарічанська, б. 6/4, кв. 62  Хмельницька, Хмельницький, Зарічанська, б. 6/4, кв. 62</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">КОГУН БОГДАН Володимирович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">08.06.2001</Data></Cell>
+    <Cell><Data ss:Type="String">380960107994</Data></Cell>
+    <Cell><Data ss:Type="String">3704911051</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Хмельницький, Інститутська, б. 7  Хмельницька область, м Хмельницький, вул. Інститутська, б. 7  Хмельницька, Хмельницька, Інституцька, б. 7, кв. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">КОЗУЛЯК Денис Антонович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">08.10.1985</Data></Cell>
+    <Cell><Data ss:Type="String">380672789505</Data></Cell>
+    <Cell><Data ss:Type="String">3132709958</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний до служби у в/ч забезпечення, ТЦК та СП, ВВНЗ, НЦ, закладах (установах), медпідрозділах, підрозділах логістики, зв’язку, ОЗ, охорони</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">25.07.2024</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Кам'янець-Подільський, Північна, б. 100, кв. кв. 24  Хмельницька область, м Кам'янець-Подільський, вул. Північна, б. 100, кв. 24  Хмельницька область, м Кам'янець-Подільський, Північна, б. 100, кв. 24</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">КОКАРЕВ ВОЛОДИМИР ВОЛОДИМИРОВИЧ</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">26.03.1981</Data></Cell>
+    <Cell><Data ss:Type="String">380985758500</Data></Cell>
+    <Cell><Data ss:Type="String">2967012494</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">4 відділ Хмельницького РТЦК та СП (Красилів)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">15.08.2025</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Красилів, Героїв УПА, б. 1А  Хмельницька область, м Красилів, Героїв УПА, б. 1а</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">КОЛУПАЄВ Михайло Валентинович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">22.02.1974</Data></Cell>
+    <Cell><Data ss:Type="String">380671001609</Data></Cell>
+    <Cell><Data ss:Type="String">2708102190</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Кам'янець-Подільський, 30 років Перемоги, б. 14, кв. 38  Хмельницька область, м Хмельницький, Довженка, б. 16/2, кв. 61</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Купратий Андрій Валентинович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">21.07.1985</Data></Cell>
+    <Cell><Data ss:Type="String">380671740025</Data></Cell>
+    <Cell><Data ss:Type="String">3124826557</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний до служби у в/ч забезпечення, ТЦК та СП, ВВНЗ, НЦ, закладах (установах), медпідрозділах, підрозділах логістики, зв’язку, ОЗ, охорони</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">13.11.2025</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Хмельницький, Козацький, б. 26  Хмельницька область, м Хмельницький, пров. Козацький, б. 26</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ЛИШЕНЬ В'ЯЧЕСЛАВ В'ЯЧЕСЛАВОВИЧ</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">15.12.1983</Data></Cell>
+    <Cell><Data ss:Type="String">380636567572</Data></Cell>
+    <Cell><Data ss:Type="String">3066421179</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Хмельницький, Довженка, б. 3, кв. 96  Хмельницька область, м Хмельницький, вул. Довженка, б. 3, кв. 96  Хмельницька область, м Хмельницький, Довженка, б. 3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Марецький Антон Михайлович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">02.05.1990</Data></Cell>
+    <Cell><Data ss:Type="String">380935000112</Data></Cell>
+    <Cell><Data ss:Type="String">3299412292</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">09.12.2024</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Хмельницький, Старокостянтинівське шосе, б. 2В, кв. 45  Хмельницька область, м Хмельницький, шосе Старокостянтинівське, б. 2В, кв. 45  ХМЕЛЬНИЦЬКА, ХМЕЛЬНИЦЬКИЙ, ВУЛ.СТАРОКОСТЯНТИНІВСЬКЕ ШОСЕ, б. 2КОРП В, кв. 45</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Михайлов Олександр Володимирович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">26.04.1971</Data></Cell>
+    <Cell><Data ss:Type="String">380969180178</Data></Cell>
+    <Cell><Data ss:Type="String">2604802152</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">13.04.2024</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Балин, Молодіжна, б. 8  Хмельницька область, с Балин, Молодіжна, б. 8, кв.   Хмельницька обл., с. Балин, вул. Молодіжна, б. 8, кв. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">МОЩАНЕЦЬ Іван Валентинович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">07.07.1998</Data></Cell>
+    <Cell><Data ss:Type="String">380636919046</Data></Cell>
+    <Cell><Data ss:Type="String">3598211993</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький районний територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">12.07.2024</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Колибань, О.Кошового, б. 3  Хмельницька область, м Хмельницький, Кошового, б. 3, кв. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">НІКІТЮК Дмитро Олександрович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">28.04.1991</Data></Cell>
+    <Cell><Data ss:Type="String">380987231317</Data></Cell>
+    <Cell><Data ss:Type="String">008740960</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">4 відділ Хмельницького РТЦК та СП (Красилів)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Матрос</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">19.12.2024</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Красилів, Заводська, б. 21, кв. кв. 7  ХМЕЛЬНИЦЬКА, КРАСИЛІВ, ВУЛ.ЗАВОДСЬКА, б. 21, кв. 7</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Паєнк Олег Анатолійович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">25.06.1982</Data></Cell>
+    <Cell><Data ss:Type="String">380978940043</Data></Cell>
+    <Cell><Data ss:Type="String">3012602894</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[403] Телекомунікацій</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Хмельницький, Курчатова, б. 1А, кв. 32  Хмельницька область, м Хмельницький, вул. Романа Шухевича, б. 1А, кв. 32  Хмельницька область, м Хмельницький, Курчатова, б. 1а, кв. 32</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ПЕТРІВ МИРОСЛАВ Богданович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">29.06.1979</Data></Cell>
+    <Cell><Data ss:Type="String">380671979538</Data></Cell>
+    <Cell><Data ss:Type="String">2903411336</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[879] Молодших спеціалістів з медичною освітою</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Хмельницький, Зарічанська, б. 44, кв. 61  Хмельницька область, м Хмельницький, Зарічанська, б. 44, кв. 61</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Петровський Олександр Володимирович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">17.09.1999</Data></Cell>
+    <Cell><Data ss:Type="String">380932715770</Data></Cell>
+    <Cell><Data ss:Type="String">3641907537</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">9 відділ Хмельницького РТЦК та СП (Віньківці)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, смт Віньківці, А.ШЕПТИЦЬКОГО, б. 14  Хмельницька область, смт Віньківці, Андрія Шептицького, б. 14</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ПИТЛИК Олександр Анатолійович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">02.04.1989</Data></Cell>
+    <Cell><Data ss:Type="String">0966980483</Data></Cell>
+    <Cell><Data ss:Type="String">3259918195</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">4 відділ Хмельницького РТЦК та СП (Красилів)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[967] Пожежної охорони</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Кульчинки, Тараса Шевченка, б. 2, кв.   Хмельницька область, с Кульчинки, Тараса Шевченка, б. 2, кв. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">РОЖИК ОЛЕКСАНДР ВАЛЕРІЙОВИЧ</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">04.12.1994</Data></Cell>
+    <Cell><Data ss:Type="String">380637155487</Data></Cell>
+    <Cell><Data ss:Type="String">3467111519</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">2 відділ Хмельницького РТЦК та СП (Городок)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Олександрівка (Городоцький), Центральна, б. 7  Хмельницька область, Олександрівка, Центральна, б. 7</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Савенко Владислав Вікторович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">06.07.1994</Data></Cell>
+    <Cell><Data ss:Type="String">380634805010</Data></Cell>
+    <Cell><Data ss:Type="String">3452005776</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький районний територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">05.09.2024</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Хмельницький, СЕРГІЯ ПАРАДЖАНОВА, б. 6  Хмельницька область, м Хмельницький, Шестакова, б. 6, кв. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ТЮРІН ІННОКЕНТІЙ Юрійович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">09.06.1980</Data></Cell>
+    <Cell><Data ss:Type="String">380972634120</Data></Cell>
+    <Cell><Data ss:Type="String">2938014270</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Хмельницький, 2-Й КАМ'ЯНЕЦЬКИЙ, б. 7, кв. 15  Хмельницька область, м Хмельницький, пров. 2-й Кам'янецький, б. 7, кв. 15  Хмельницька, Хмельницький, Маяковського, б. 7, кв. 15</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ФЕДАШ Вадим Олегович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">25.06.1999</Data></Cell>
+    <Cell><Data ss:Type="String">380671273622</Data></Cell>
+    <Cell><Data ss:Type="String">3633508472</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Офіцерський склад</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">[021000] Бойове застосування механізованих з&amp;#39;єднань, військових частин і підрозділів</Data></Cell>
+    <Cell><Data ss:Type="String">Старший лейтенант</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">17.07.2023</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Немичинці, Богдана Хмельницького, б. 8  Хмельницька область, м Хмельницький, вул. Катіонівська, б. 48  ХМЕЛЬНИЦЬКА, ХМЕЛЬНИЦЬКИЙ, ВУЛ.КАТІОНІВСЬКА, б. 48, кв. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Федик Валентин Іванович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">17.06.1973</Data></Cell>
+    <Cell><Data ss:Type="String">380678965131</Data></Cell>
+    <Cell><Data ss:Type="String">2683121572</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[790] Перевезення автомобільним транспортом</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">11.02.2026</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Черепівка, Травнева, б. 24  Хмельницька область, с Черепівка, вул. Травнева, б. 24  Хмельницька область, с Черепівка, ВУЛ.ТРАВНЕВА, б. 24, кв. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ФІЛІПЧУК Вадим Володимирович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">18.02.1988</Data></Cell>
+    <Cell><Data ss:Type="String">0673080035</Data></Cell>
+    <Cell><Data ss:Type="String">3219013930</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">4 відділ Хмельницького РТЦК та СП (Красилів)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">30.05.2024</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Лагодинці, Незалежності, б. 21  Хмельницька область, с Лагодинці, Незалежності, б. 21, кв. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ФІЛІПЧУК Олег Володимирович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">11.01.1990</Data></Cell>
+    <Cell><Data ss:Type="String">380686051232</Data></Cell>
+    <Cell><Data ss:Type="String">3288308914</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">4 відділ Хмельницького РТЦК та СП (Красилів)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">30.05.2024</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Красилів, Грушевського, б. 84, кв. кв. 32  Хмельницька область, м Красилів, Грушевського, б. 84, кв. 32</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Чобан Олег Васильович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">19.10.1993</Data></Cell>
+    <Cell><Data ss:Type="String">380977855120</Data></Cell>
+    <Cell><Data ss:Type="String">3426011113</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">1 відділ Кам&amp;#39;янець-Подільського РТЦК та СП (Дунаївці)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">13.01.2026</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Великий Жванчик, Паланицька, б. 9  Хмельницька область, с Великий Жванчик, вул. Паланицька, б. 9  Хмельницька, Великий Жванчик, Паланіцька, б. 9, кв. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ШАХРАЙ ОЛЕКСАНДР Ілліч</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">17.05.1987</Data></Cell>
+    <Cell><Data ss:Type="String">380661378896</Data></Cell>
+    <Cell><Data ss:Type="String">3191317891</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[Б] Спеціалісти з ракетної зброї</Data></Cell>
+    <Cell><Data ss:Type="String">[035] Зенітних ракет малої дії</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, м Хмельницький, ПАНАСА МИРНОГО, б. 30, кв. 29  Хмельницька область, м Хмельницький, вул. Панаса Мирного, б. 30, кв. 29  Хмельницька область, м Хмельницький, вул. Панаса Мирного, б. 30</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ШАШКОВ Геннадій Анатолійович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">22.10.1971</Data></Cell>
+    <Cell><Data ss:Type="String">0960789521</Data></Cell>
+    <Cell><Data ss:Type="String">2622720076</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Офіцерський склад</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">[021000] Бойове застосування механізованих з&amp;#39;єднань, військових частин і підрозділів</Data></Cell>
+    <Cell><Data ss:Type="String">Підполковник</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">10.02.2026</Data></Cell>
+    <Cell><Data ss:Type="String">Вінницька область, м Могилів-Подільський, просп. Незалежності, б. 130А, кв. 24  Вінницька область, м Могилів-Подільський, Проспект Незалежності , б. 130а , кв. 24</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ШЕРШУН Антон Антонович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">10.07.1993</Data></Cell>
+    <Cell><Data ss:Type="String">0967787090</Data></Cell>
+    <Cell><Data ss:Type="String">3415914856</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">6 відділ Хмельницького РТЦК та СП (Ярмолинці)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[790] Перевезення автомобільним транспортом</Data></Cell>
+    <Cell><Data ss:Type="String">Старший солдат</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">14.04.2015</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Проскурівка, Шкільна, б. 3, кв.   Хмельницька область, с Проскурівка, Шкільна, б. 3</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">БОЯРЧУК АНДРІЙ Дмитрович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">28.03.1970</Data></Cell>
+    <Cell><Data ss:Type="String">380681746350</Data></Cell>
+    <Cell><Data ss:Type="String">2565402558</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницький об&amp;#39;єднаний міський територіальний центр комплектування та соціальної підтримки</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[085] Крилатих ракет</Data></Cell>
+    <Cell><Data ss:Type="String">Молодший сержант</Data></Cell>
+    <Cell><Data ss:Type="String">Придатний</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">15.07.2025</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Веселівка, Миру, б. 7 КОРП. А  Хмельницька область, с Веселівка, Миру, б. 7, кв. </Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">БРЮХОВ ОЛЕКСІЙ Андрійович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">27.04.1991</Data></Cell>
+    <Cell><Data ss:Type="String">380979079353</Data></Cell>
+    <Cell><Data ss:Type="String">3335418536</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">2 відділ Хмельницького РТЦК та СП (Городок)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Іванківці (Городоцький), Корольова, б. 17А  Хмельницька область, с Іванківці (Городоцький), вул. Корольова, б. 17  Хмельницька область, с. Іванківці, вул. Корольова, б. 17а</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ЛИХОВІТЕР ВЛАДИСЛАВ АНАТОЛІЙОВИЧ</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">17.11.1998</Data></Cell>
+    <Cell><Data ss:Type="String">380680910625</Data></Cell>
+    <Cell><Data ss:Type="String">3611511498</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">2 відділ Хмельницького РТЦК та СП (Городок)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[999] Потребує проходження базової загальновійськової підготовки</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Спасівка, Курортна, б. 15  Хмельницька область, смт Сатанів, вул. Курортна, б. 15  Хмельницька область, с-ще Сатанів, вул. Курортна, б. 15</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ЧУХАСЬ Микола Володимирович</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">18.12.1968</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">2518906052</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">2 відділ Хмельницького РТЦК та СП (Городок)</Data></Cell>
+    <Cell><Data ss:Type="String">Картотека вільних залишків</Data></Cell>
+    <Cell><Data ss:Type="String">Підлягають призову на військову службу під час мобілізації</Data></Cell>
+    <Cell><Data ss:Type="String">Рядовий, сержантський і старшинський склад запасу</Data></Cell>
+    <Cell><Data ss:Type="String">Ні</Data></Cell>
+    <Cell><Data ss:Type="String">[А] Всі види Збройних Сил України, родів військ і служб, для яких не визначені особливі вимоги щодо проходження військової служби</Data></Cell>
+    <Cell><Data ss:Type="String">[917] Військових оркестрів, військових музичних центрів</Data></Cell>
+    <Cell><Data ss:Type="String">Солдат</Data></Cell>
+    <Cell><Data ss:Type="String">Непридатний в мирний час, обмежено придатний у воєнний час</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">30.03.2023</Data></Cell>
+    <Cell><Data ss:Type="String">Хмельницька область, с Чорниводи, Каденюка, б. 32</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>41</ActiveRow>
+     <RangeSelection>R42</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

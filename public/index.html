@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Географічна карта</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      display: flex;
+      height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+    }
+
+    /* ── Sidebar ── */
+    #sidebar {
+      width: 320px;
+      min-width: 260px;
+      display: flex;
+      flex-direction: column;
+      background: #161b22;
+      border-right: 1px solid #30363d;
+      z-index: 10;
+    }
+
+    #sidebar-header {
+      padding: 14px 16px 10px;
+      background: #0d1117;
+      border-bottom: 1px solid #30363d;
+    }
+
+    #sidebar-header h1 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #58a6ff;
+      margin-bottom: 10px;
+      letter-spacing: .3px;
+    }
+
+    #progress-wrap {
+      background: #21262d;
+      border-radius: 6px;
+      height: 6px;
+      overflow: hidden;
+      margin-bottom: 7px;
+    }
+
+    #progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #58a6ff, #3fb950);
+      transition: width .25s ease;
+    }
+
+    #status-text {
+      font-size: 11px;
+      color: #8b949e;
+    }
+
+    /* ── Search ── */
+    #search-box {
+      padding: 10px 12px;
+      background: #161b22;
+      border-bottom: 1px solid #21262d;
+    }
+
+    #search-input {
+      width: 100%;
+      padding: 7px 10px;
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      color: #e6edf3;
+      font-size: 13px;
+      outline: none;
+      transition: border-color .15s;
+    }
+
+    #search-input::placeholder { color: #484f58; }
+    #search-input:focus { border-color: #58a6ff; }
+
+    /* ── Person list ── */
+    #person-list {
+      overflow-y: auto;
+      flex: 1;
+      scrollbar-width: thin;
+      scrollbar-color: #30363d #161b22;
+    }
+
+    #person-list::-webkit-scrollbar { width: 5px; }
+    #person-list::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+
+    .person-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 9px 14px;
+      border-bottom: 1px solid #21262d;
+      cursor: pointer;
+      transition: background .12s;
+    }
+
+    .person-item:hover { background: #1c2128; }
+    .person-item.active { background: #1c2128; border-left: 3px solid #58a6ff; padding-left: 11px; }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      margin-top: 4px;
+      flex-shrink: 0;
+      background: #30363d;
+      transition: background .2s;
+    }
+    .dot.pending  { background: #30363d; }
+    .dot.loading  { background: #e3b341; animation: pulse 1s infinite; }
+    .dot.ok       { background: #3fb950; }
+    .dot.error    { background: #f85149; }
+
+    @keyframes pulse {
+      0%,100% { opacity: 1; }
+      50%      { opacity: .25; }
+    }
+
+    .person-info { overflow: hidden; }
+
+    .person-name {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #c9d1d9;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .person-addr {
+      font-size: 11px;
+      color: #6e7681;
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* ── Map ── */
+    #map {
+      flex: 1;
+      height: 100%;
+    }
+
+    /* ── InfoWindow content ── */
+    .iw-body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 4px 2px;
+      min-width: 220px;
+    }
+    .iw-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0d1117;
+      margin-bottom: 5px;
+    }
+    .iw-addr {
+      font-size: 12px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── Sidebar ─────────────────────────────────────────────────────────── -->
+<div id="sidebar">
+  <div id="sidebar-header">
+    <h1>🗺 Географічна карта</h1>
+    <div id="progress-wrap"><div id="progress-bar"></div></div>
+    <div id="status-text">Ініціалізація карти…</div>
+  </div>
+
+  <div id="search-box">
+    <input id="search-input" type="text" placeholder="Пошук за прізвищем або адресою…" />
+  </div>
+
+  <div id="person-list"></div>
+</div>
+
+<!-- ─── Map ──────────────────────────────────────────────────────────────── -->
+<div id="map"></div>
+
+<!-- ─── Scripts ──────────────────────────────────────────────────────────── -->
+<script>
+  'use strict';
+
+  const GEOCODE_DELAY_MS = 200; // ms between geocode calls (rate-limit safety)
+
+  let map, geocoder, infoWindow;
+  let peopleData  = [];
+  const markers   = {};   // index → google.maps.Marker
+
+  /* ── Init (called by Maps API callback) ── */
+  async function initApp() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: 49.422, lng: 26.987 },  // Хмельницький
+      zoom: 9,
+      mapTypeId: 'roadmap',
+      fullscreenControl: true,
+      streetViewControl: false,
+      mapTypeControlOptions: { position: google.maps.ControlPosition.TOP_RIGHT }
+    });
+
+    geocoder   = new google.maps.Geocoder();
+    infoWindow = new google.maps.InfoWindow();
+
+    // Close infoWindow on map click
+    map.addListener('click', () => infoWindow.close());
+
+    updateStatus('Завантаження даних…', 0);
+
+    const res    = await fetch('/data');
+    peopleData   = await res.json();
+
+    renderList(peopleData);
+    updateStatus(`Геокодування 0 / ${peopleData.length}…`, 0);
+
+    await geocodeAll();
+  }
+
+  /* ── Render sidebar list ── */
+  function renderList(people) {
+    const list = document.getElementById('person-list');
+    list.innerHTML = '';
+
+    people.forEach((p, i) => {
+      const el = document.createElement('div');
+      el.className   = 'person-item';
+      el.dataset.idx = i;
+      el.innerHTML =
+        `<div class="dot pending" id="dot-${i}"></div>` +
+        `<div class="person-info">` +
+          `<div class="person-name">${escHtml(p.name)}</div>` +
+          `<div class="person-addr">${escHtml(p.address)}</div>` +
+        `</div>`;
+      el.addEventListener('click', () => focusPerson(i));
+      list.appendChild(el);
+    });
+  }
+
+  /* ── Focus on a person ── */
+  function focusPerson(i) {
+    const marker = markers[i];
+    if (!marker) return;
+
+    map.panTo(marker.getPosition());
+    map.setZoom(15);
+
+    const p = peopleData[i];
+    infoWindow.setContent(
+      `<div class="iw-body">` +
+        `<div class="iw-name">${escHtml(p.name)}</div>` +
+        `<div class="iw-addr">${escHtml(p.address)}</div>` +
+      `</div>`
+    );
+    infoWindow.open(map, marker);
+
+    document.querySelectorAll('.person-item').forEach(el => el.classList.remove('active'));
+    const listItem = document.querySelector(`.person-item[data-idx="${i}"]`);
+    if (listItem) {
+      listItem.classList.add('active');
+      listItem.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+  }
+
+  /* ── Geocode all people sequentially ── */
+  async function geocodeAll() {
+    let placed = 0, failed = 0;
+
+    for (let i = 0; i < peopleData.length; i++) {
+      setDot(i, 'loading');
+
+      await new Promise(resolve => {
+        geocoder.geocode(
+          { address: peopleData[i].address + ', Україна', region: 'UA' },
+          (results, status) => {
+            if (status === 'OK' && results.length > 0) {
+              addMarker(i, results[0].geometry.location);
+              setDot(i, 'ok');
+              placed++;
+            } else {
+              console.warn(`[GEOCODE FAIL] ${peopleData[i].name} | ${peopleData[i].address} | ${status}`);
+              setDot(i, 'error');
+              failed++;
+            }
+
+            const done = placed + failed;
+            const pct  = Math.round((done / peopleData.length) * 100);
+            updateStatus(
+              done < peopleData.length
+                ? `Геокодування ${done} / ${peopleData.length}…`
+                : `Готово: ${placed} позначок${failed ? ` (помилок: ${failed})` : ''}`,
+              pct
+            );
+            resolve();
+          }
+        );
+      });
+
+      await sleep(GEOCODE_DELAY_MS);
+    }
+  }
+
+  /* ── Create a map marker ── */
+  function addMarker(i, position) {
+    const p = peopleData[i];
+
+    const marker = new google.maps.Marker({
+      map,
+      position,
+      title: p.name,
+      label: {
+        text:       p.surname,
+        fontSize:   '11px',
+        fontWeight: 'bold',
+        color:      '#0d1f4a'
+      },
+      icon: {
+        path:         google.maps.SymbolPath.CIRCLE,
+        scale:        9,
+        fillColor:    '#4fc3f7',
+        fillOpacity:  0.92,
+        strokeColor:  '#0d1f4a',
+        strokeWeight: 1.5
+      }
+    });
+
+    marker.addListener('click', () => focusPerson(i));
+    markers[i] = marker;
+  }
+
+  /* ── Helpers ── */
+  function setDot(i, state) {
+    const el = document.getElementById(`dot-${i}`);
+    if (el) el.className = `dot ${state}`;
+  }
+
+  function updateStatus(text, pct) {
+    document.getElementById('status-text').textContent = text;
+    document.getElementById('progress-bar').style.width = pct + '%';
+  }
+
+  function escHtml(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function sleep(ms) {
+    return new Promise(r => setTimeout(r, ms));
+  }
+
+  /* ── Search filter ── */
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('search-input').addEventListener('input', function () {
+      const q = this.value.toLowerCase();
+      document.querySelectorAll('.person-item').forEach(el => {
+        const idx  = Number(el.dataset.idx);
+        const p    = peopleData[idx] || {};
+        const show = !q
+          || (p.name    || '').toLowerCase().includes(q)
+          || (p.address || '').toLowerCase().includes(q);
+        el.style.display = show ? '' : 'none';
+      });
+    });
+  });
+</script>
+
+<!-- Google Maps API – callback=initApp -->
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaIydo87nxHMB6SuC_XlxvrM6Bwk_Cwhs&callback=initApp&language=uk&region=UA"
+  async defer>
+</script>
+
+</body>
+</html>
